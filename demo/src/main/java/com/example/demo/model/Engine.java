@@ -18,10 +18,10 @@ public class Engine {
     @Column(name = "engine_number", unique = true)
     private String number;
 
-    @Column
+    @Column(nullable = false)
     private Integer cubature;
 
-    @Column
+    @Column(nullable = false)
     private Integer hoursPower;
 
     public Engine() {

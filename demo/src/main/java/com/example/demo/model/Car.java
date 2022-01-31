@@ -41,7 +41,7 @@ public class Car implements Serializable {
     private String carNumber;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = Owner.class)
-    @JoinColumn(name="owner_id", nullable = false)
+    @JoinColumn(name="owner_id")
     private Owner owner;
 
     public Car() {
