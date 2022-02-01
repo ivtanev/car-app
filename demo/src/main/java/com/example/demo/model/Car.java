@@ -37,10 +37,10 @@ public class Car implements Serializable {
     @Column
     private Integer yearOfManufacture;
 
-    @Column
+    @Column(unique = true)
     private String carNumber;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = Owner.class)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH, targetEntity = Owner.class)
     @JoinColumn(name="owner_id")
     private Owner owner;
 

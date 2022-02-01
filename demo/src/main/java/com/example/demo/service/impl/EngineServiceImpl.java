@@ -20,6 +20,11 @@ public class EngineServiceImpl implements EngineService {
     }
 
     @Override
+    public Optional<Engine> findByEngineNumber(String engineNumber) {
+        return this.engineRepository.findByNumber(engineNumber);
+    }
+
+    @Override
     public Engine saveEngine(Engine engine) {
         return this.engineRepository.save(engine);
     }
